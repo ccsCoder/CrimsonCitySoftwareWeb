@@ -1,0 +1,135 @@
+/* 
+    Document   : styles
+    Created on : Aug 16, 2013, 2:00:58 PM
+    Author     : NISHANTG
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+body {
+    background-image: url('../images/bg.png');
+    background-repeat: repeat-x,repeat-y;
+    font-size: 100%;
+    font-family: Georgia;
+}
+
+.companyHeader {
+    font-size: 32px;
+    font-style: italic;
+    color:crimson;
+    
+}
+.crimsonColor {
+    color:crimson;
+}
+.featurette-image {
+    max-width: 200px;
+    max-height: 200px;
+}
+.marketingImages {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.marketing p {
+    font-size: small;
+    color: black;
+    font-style: italic;
+}
+
+.marketing h4 {
+    color:crimson;
+}
+.navbar {
+    margin-top: 10px;
+}
+.shadowedContainer,.navbar {
+    box-shadow: 0px 2px 5px 2px gray;
+    border-radius: 5px;
+    /*background-image: url('../images/city.png')*/
+    margin-bottom: 20px;
+    
+}
+
+.navbar-inner,.brand {
+    min-height: 30px;
+    padding-top:10px;
+}
+
+#myCarousel {
+    margin-top: 20px;
+   
+}
+.carousel .item {
+    height: 350px;
+}
+.carousel img {
+    width: 100%;
+    height: 350px;
+}
+.carousel-caption {
+    background-color:black;
+    opacity: 0.8;
+    color:white;
+    border-top: 1px solid darkgray;
+}
+
+@media only screen and (max-width: 400px) {
+    .responsiveFont {
+        opacity:1;
+        color:white;
+        font-size: 9px;
+        font-weight: bold;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+  .responsiveFont {
+        opacity:1;
+        color:white;
+        font-size: 12px;
+        font-weight: bold;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+ .responsiveFont {
+        opacity:1;
+        color:white;
+        font-size: 40px;
+        font-weight: bold;
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    .responsiveFont {
+        opacity:1;
+        color:white;
+        font-size: 40px;
+        font-weight: bold;
+    }
+} 
+
+.carousel .lead {
+    font-style: italic;
+}
+
+.featurette .lead {
+    font-size: 17px;
+}
+
+.footerText {
+    /*min-height: 100px;*/
+    /*background-image: url('../images/back_pattern.png');*/
+    /*background-repeat: repeat-x;*/
+    /*background-color: darkgray;*/
+    text-align: center;
+    color:black;
+    font-size: small;
+    font-style: italic;
+}
+
+/*.footerText .well {
+    background-color: black;
+    opacity: 0.6;
+}*/
