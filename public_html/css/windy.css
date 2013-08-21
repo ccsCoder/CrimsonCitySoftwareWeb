@@ -25,6 +25,10 @@ ul.wi-container li {
 	pointer-events: auto;
 }
 
+/*ul.wi-container li img {
+    width:100%;
+}*/
+
 ul.wi-container li.wi-move {
 	pointer-events: none;
 	-webkit-transition: -webkit-transform 600ms ease, opacity 600ms ease, left 600ms ease, top 600ms ease;

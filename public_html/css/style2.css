@@ -12,6 +12,7 @@
 
 .windy-demo li img {
 	display: block;
+        width:220px;
 }
 
 .windy-demo h4 {
@@ -20,6 +21,7 @@
 	margin: 0;
 	color: #ccc;
 	text-align: center;
+        font-size:smaller;
 }
 
 .windy-demo ul.wi-container:before,
