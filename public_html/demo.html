@@ -9,9 +9,10 @@
 
         <link href="css/bootstrap.min.css" rel="stylesheet"/>
         <link href="css/jquery.share.css" rel="stylesheet"/>
-        <!--<link href="css/bootstrap-responsive.min.css" rel="stylesheet">-->
         <link href="css/styles.css" rel="stylesheet"/>
-        <!--<link href="css/style.css" rel="stylesheet"/>-->
+        <link rel="stylesheet" type="text/css" href="css/windy.css" />
+        <link rel="stylesheet" type="text/css" href="css/style2.css" />
+        <script type="text/javascript" src="js/modernizr.custom.79639.js"></script>
         
         <!-- Fav and touch icons -->
         <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/apple-touch-icon-144-precomposed.png">
@@ -23,9 +24,70 @@
         <script type="text/javascript" src="js/jquery.min.js"></script>
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
         <script type="text/javascript" src="js/jquery.share.js"></script>
-        <script type="text/javascript" src="js/arbor.js"></script>
+        <!--<script type="text/javascript" src="js/arbor.js"></script>-->
         <script type="text/javascript" src="js/scripts.js"></script>
-        <script type="text/javascript" src="js/main.js"></script>
+        <!--<script type="text/javascript" src="js/main.js"></script>-->
+        <script type="text/javascript" src="js/jquery.windy.js"></script>
+        <script type="text/javascript">	
+			$(function() {
+
+				var $el = $( '#wi-el' ),
+					windy = $el.windy( {
+						// rotation and translation boundaries for the items transitions
+						boundaries : {
+							rotateX : { min : 40 , max : 90 },
+							rotateY : { min : -15 , max : 45 },
+							rotateZ : { min : -10 , max : 10 },
+							translateX : { min : -400 , max : 400 },
+							translateY : { min : -400 , max : 400 },
+							translateZ : { min : 350 , max : 550 }
+						}
+					} ),
+					allownavnext = false,
+					allownavprev = false;
+
+				$( '#nav-prev' ).on( 'mousedown', function( event ) {
+
+					allownavprev = true;
+					navprev();
+				
+				} ).on( 'mouseup mouseleave', function( event ) {
+
+					allownavprev = false;
+				
+				} );
+
+				$( '#nav-next' ).on( 'mousedown', function( event ) {
+
+					allownavnext = true;
+					navnext();
+				
+				} ).on( 'mouseup mouseleave', function( event ) {
+
+					allownavnext = false;
+				
+				} );
+
+				function navnext() {
+					if( allownavnext ) {
+						windy.next();
+						setTimeout( function() {	
+							navnext();
+						}, 150 );
+					}
+				}
+
+				function navprev() {
+					if( allownavprev ) {
+						windy.prev();
+						setTimeout( function() {	
+							navprev();
+						}, 150 );
+					}
+				}
+
+			});
+		</script>
     </head>
 
     <body>
@@ -98,7 +160,66 @@
                         <!-- Start Arbor.js here -->
                         <div class="row-fluid">
                             <div class="span12">
-                                <canvas id="viewport" width="800" height="600"></canvas>
+                                <!--<canvas id="viewport" width="800" height="600"></canvas>-->
+                                <div class="windy-demo windy-demo-2">
+					<ul id="wi-el" class="wi-container">
+						<li><img src="images/demo2/1.jpg" alt="image1"/><h4>Coco Loko</h4></li>
+						<li><img src="images/demo2/2.jpg" alt="image2"/><h4>Vermouth Land</h4></li>
+						<li><img src="images/demo2/3.jpg" alt="image3"/><h4>Electrodynamics</h4></li>
+						<li><img src="images/demo2/4.jpg" alt="image4"/><h4>Retinal Bliss</h4></li>
+						<li><img src="images/demo2/5.jpg" alt="image5"/><h4>Disco Fever</h4></li>
+						<li><img src="images/demo2/6.jpg" alt="image6"/><h4>Serenity</h4></li>
+						<li><img src="images/demo2/7.jpg" alt="image7"/><h4>Dark Honor</h4></li>
+						<li><img src="images/demo2/8.jpg" alt="image8"/><h4>Nested Happiness</h4></li>
+						<li><img src="images/demo2/9.jpg" alt="image9"/><h4>Cherry Country</h4></li>
+						<li><img src="images/demo2/10.jpg" alt="image10"/><h4>Blossom Delight</h4></li>
+						<li><img src="images/demo2/11.jpg" alt="image11"/><h4>Heartbeat</h4></li>
+						<li><img src="images/demo2/12.jpg" alt="image12"/><h4>Inner Organs</h4></li>
+						<li><img src="images/demo2/13.jpg" alt="image13"/><h4>Wanted Darkness</h4></li>
+						<li><img src="images/demo2/14.jpg" alt="image14"/><h4>Blessed Fever</h4></li>
+						<li><img src="images/demo2/15.jpg" alt="image15"/><h4>Origins</h4></li>
+						<li><img src="images/demo2/16.jpg" alt="image16"/><h4>Fire Lime</h4></li>
+						<li><img src="images/demo2/17.jpg" alt="image17"/><h4>Host Rumor</h4></li>
+						<li><img src="images/demo2/1.jpg" alt="image1"/><h4>Coco Loko</h4></li>
+						<li><img src="images/demo2/2.jpg" alt="image2"/><h4>Vermouth Land</h4></li>
+						<li><img src="images/demo2/3.jpg" alt="image3"/><h4>Electrodynamics</h4></li>
+						<li><img src="images/demo2/4.jpg" alt="image4"/><h4>Retinal Bliss</h4></li>
+						<li><img src="images/demo2/5.jpg" alt="image5"/><h4>Disco Fever</h4></li>
+						<li><img src="images/demo2/6.jpg" alt="image6"/><h4>Serenity</h4></li>
+						<li><img src="images/demo2/7.jpg" alt="image7"/><h4>Dark Honor</h4></li>
+						<li><img src="images/demo2/8.jpg" alt="image8"/><h4>Nested Happiness</h4></li>
+						<li><img src="images/demo2/9.jpg" alt="image9"/><h4>Cherry Country</h4></li>
+						<li><img src="images/demo2/10.jpg" alt="image10"/><h4>Blossom Delight</h4></li>
+						<li><img src="images/demo2/11.jpg" alt="image11"/><h4>Heartbeat</h4></li>
+						<li><img src="images/demo2/12.jpg" alt="image12"/><h4>Inner Organs</h4></li>
+						<li><img src="images/demo2/13.jpg" alt="image13"/><h4>Wanted Darkness</h4></li>
+						<li><img src="images/demo2/14.jpg" alt="image14"/><h4>Blessed Fever</h4></li>
+						<li><img src="images/demo2/15.jpg" alt="image15"/><h4>Origins</h4></li>
+						<li><img src="images/demo2/16.jpg" alt="image16"/><h4>Fire Lime</h4></li>
+						<li><img src="images/demo2/17.jpg" alt="image17"/><h4>Host Rumor</h4></li>
+						<li><img src="images/demo2/1.jpg" alt="image1"/><h4>Coco Loko</h4></li>
+						<li><img src="images/demo2/2.jpg" alt="image2"/><h4>Vermouth Land</h4></li>
+						<li><img src="images/demo2/3.jpg" alt="image3"/><h4>Electrodynamics</h4></li>
+						<li><img src="images/demo2/4.jpg" alt="image4"/><h4>Retinal Bliss</h4></li>
+						<li><img src="images/demo2/5.jpg" alt="image5"/><h4>Disco Fever</h4></li>
+						<li><img src="images/demo2/6.jpg" alt="image6"/><h4>Serenity</h4></li>
+						<li><img src="images/demo2/7.jpg" alt="image7"/><h4>Dark Honor</h4></li>
+						<li><img src="images/demo2/8.jpg" alt="image8"/><h4>Nested Happiness</h4></li>
+						<li><img src="images/demo2/9.jpg" alt="image9"/><h4>Cherry Country</h4></li>
+						<li><img src="images/demo2/10.jpg" alt="image10"/><h4>Blossom Delight</h4></li>
+						<li><img src="images/demo2/11.jpg" alt="image11"/><h4>Heartbeat</h4></li>
+						<li><img src="images/demo2/12.jpg" alt="image12"/><h4>Inner Organs</h4></li>
+						<li><img src="images/demo2/13.jpg" alt="image13"/><h4>Wanted Darkness</h4></li>
+						<li><img src="images/demo2/14.jpg" alt="image14"/><h4>Blessed Fever</h4></li>
+						<li><img src="images/demo2/15.jpg" alt="image15"/><h4>Origins</h4></li>
+						<li><img src="images/demo2/16.jpg" alt="image16"/><h4>Fire Lime</h4></li>
+						<li><img src="images/demo2/17.jpg" alt="image17"/><h4>Host Rumor</h4></li>
+					</ul>
+					<nav>
+						<span id="nav-prev">prev</span>
+						<span id="nav-next">next</span>
+					</nav>
+				</div>
                                 
                             </div>
                         </div>
